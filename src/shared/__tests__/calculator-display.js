@@ -5,9 +5,20 @@ import CalculatorDisplay from '../calculator-display'
 test('should render', () => {
   const {container} = render(<CalculatorDisplay value="0" />)
   expect(container).toMatchInlineSnapshot(`
+    .emotion-0 {
+      position: relative;
+      color: white;
+      background: #1c191c;
+      line-height: 130px;
+      font-size: 6em;
+      -webkit-flex: 2;
+      -ms-flex: 2;
+      flex: 2;
+    }
+
     <div>
       <div
-        class="css-lq9ahq-calculator-display--CalculatorDisplay"
+        class="emotion-0"
         id="calculator-display"
       >
         <div
