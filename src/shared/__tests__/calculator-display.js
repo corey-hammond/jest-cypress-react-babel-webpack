@@ -1,10 +1,10 @@
 import React from 'react'
-import {render} from '@testing-library/react'
+import {render} from 'calculator-test-utils'
 import CalculatorDisplay from '../calculator-display'
 
-test('should render', () => {
+test('renders', () => {
   const {container} = render(<CalculatorDisplay value="0" />)
-  expect(container).toMatchInlineSnapshot(`
+  expect(container.firstChild).toMatchInlineSnapshot(`
     .emotion-0 {
       position: relative;
       color: white;
@@ -16,18 +16,16 @@ test('should render', () => {
       flex: 2;
     }
 
-    <div>
+    <div
+      class="emotion-0"
+      id="calculator-display"
+    >
       <div
-        class="emotion-0"
-        id="calculator-display"
+        class="autoScalingText"
+        data-testid="total"
+        style="transform: scale(1,1);"
       >
-        <div
-          class="autoScalingText"
-          data-testid="total"
-          style="transform: scale(1,1);"
-        >
-          0
-        </div>
+        0
       </div>
     </div>
   `)
